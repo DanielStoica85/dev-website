@@ -1,6 +1,6 @@
 // Colors
-$primary-color: #08415c;
-$secondary-color: #cc2936;
+$primary-color: #084c61;
+$secondary-color: #e3b505;
 
 // Spacing
 $small-size: 1.2rem;
@@ -9,9 +9,6 @@ $large-size: 3.2rem;
 $xl-size: 4.8rem;
 
 $desktop-breakpoint: 45rem;
-
-// Others
-$home-image: url('../images/background.jpg');
 
 // Main transition effect
 @mixin easeOut {
