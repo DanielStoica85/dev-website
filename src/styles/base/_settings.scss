@@ -1,4 +1,6 @@
 // Colors
+$primary-color: #08415c;
+$secondary-color: #cc2936;
 
 // Spacing
 $small-size: 1.2rem;
@@ -7,3 +9,20 @@ $large-size: 3.2rem;
 $xl-size: 4.8rem;
 
 $desktop-breakpoint: 45rem;
+
+// Others
+$home-image: url('../images/background.jpg');
+
+// Main transition effect
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+
+// Set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fffffa;
+  }
+}

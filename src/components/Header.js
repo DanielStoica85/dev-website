@@ -1,24 +1,33 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import MenuButton from './MenuButton';
+import NavigationMenu from './NavigationMenu';
 
-const Header = () => {
-  return (
-    <header>
-      <h1>Portfolio</h1>
-      <NavLink to="/" activeClassName="is-active" exact={true}>
-        Home
-      </NavLink>
-      <NavLink to="/about" activeClassName="is-active">
-        About
-      </NavLink>
-      <NavLink to="/portfolio" activeClassName="is-active" exact={true}>
-        Portfolio
-      </NavLink>
-      <NavLink to="/contact" activeClassName="is-active">
-        Contact
-      </NavLink>
-    </header>
-  );
-};
+export default class Header extends React.Component {
+  constructor(props) {
+    super(props);
 
-export default Header;
+    this.onMenuButtonClick = this.onMenuButtonClick.bind(this);
+
+    this.state = {
+      showNav: false
+    };
+  }
+
+  onMenuButtonClick() {
+    this.setState(prevState => {
+      return {
+        showNav: !prevState.showNav
+      };
+    });
+  }
+
+  render() {
+    console.log(this.state);
+    return (
+      <header>
+        <MenuButton onMenuButtonClick={this.onMenuButtonClick} />
+        {this.state.showNav && <NavigationMenu />}
+      </header>
+    );
+  }
+}
