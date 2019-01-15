@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import portrait from '../assets/images/portrait.png';
+import portrait from '../../assets/images/portrait.png';
+import PropTypes from 'prop-types';
 
 export default class NavigationMenu extends Component {
   render() {
     console.log(portrait);
     return (
       <nav className="menu">
-        <div className="menu__brand">
+        <div className={`menu__brand ${this.props.showNav ? 'show' : ''}`}>
           <div className="portrait" />
         </div>
 
-        <ul className="menu__navigation">
+        <ul className={`menu__navigation ${this.props.showNav ? 'show' : ''}`}>
           <li className="menu__navigation__item">
             <NavLink
               to="/"
@@ -55,3 +56,8 @@ export default class NavigationMenu extends Component {
     );
   }
 }
+
+// PropTypes
+NavigationMenu.propTypes = {
+  showNav: PropTypes.bool.isRequired
+};

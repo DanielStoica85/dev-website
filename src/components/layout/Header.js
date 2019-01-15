@@ -22,10 +22,15 @@ export default class Header extends React.Component {
   }
 
   render() {
+    const showNav = this.state.showNav;
+    console.log(showNav);
     return (
       <header>
-        <MenuButton onMenuButtonClick={this.onMenuButtonClick} />
-        {this.state.showNav && <NavigationMenu />}
+        <MenuButton
+          onMenuButtonClick={this.onMenuButtonClick}
+          showNav={showNav}
+        />
+        {showNav && <NavigationMenu showNav={showNav} />}
       </header>
     );
   }
