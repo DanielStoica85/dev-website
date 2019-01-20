@@ -6,9 +6,9 @@
   opacity: 0.9;
   display: flex;
   justify-content: center;
-
-  span {
-    width: 50%;
+  visibility: hidden;
+  &.show {
+    visibility: visible;
   }
 
   &__brand,
@@ -17,7 +17,7 @@
     flex-flow: column wrap;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 50%;
     height: 100vh;
     overflow: hidden;
   }
@@ -27,35 +27,21 @@
     padding: 0;
     background: darken($primary-color, 5);
     list-style: none;
-    &.SlideDown-appear {
-      transform: translate3d(0, -100%, 0);
-    }
-    &.SlideDown-appear.SlideDown-appear-active {
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+    &.show {
       // Slide in from the bottom
       transform: translate3d(0, 0, 0);
-      @include easeOut;
     }
   }
 
   &__brand {
     background: $primary-color;
-    &.SlideUp-appear {
-      transform: translate3d(0, 100%, 0);
-    }
-    &.SlideUp-appear.SlideUp-appear-active {
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+    &.show {
       // Slide in from the bottom
       transform: translate3d(0, 0, 0);
-      @include easeOut;
-    }
-    &.SlideUp-leave {
-      transform: translate3d(0, 0, 0);
-    }
-    &.SlideUp-leave.SlideUp-leave-active {
-      transform: translate3d(0, 100%, 0);
-      @include easeOut;
-    }
-    &.SlideUp-leave-done {
-      transform: translate3d(0, 100%, 0);
     }
 
     .portrait {
@@ -68,8 +54,14 @@
   }
 
   .menu__navigation__item {
-    transform: translate3d(600px, 0 0);
+    transform: translate3d(600px, 0, 0);
+    font-weight: 400;
+    color: set-text-color($primary-color);
     @include easeOut;
+    &.show {
+      // Slide in from the right
+      transform: translate3d(0, 0, 0);
+    }
   }
 
   .menu__navigation__item__link {
@@ -78,8 +70,8 @@
     font-size: $large-size;
     text-transform: uppercase;
     padding: $medium-size 0;
-    font-weight: 400;
-    color: set-text-color($primary-color);
+    // font-weight: 400;
+    // color: set-text-color($primary-color);
     text-decoration: none;
     letter-spacing: 0.2rem;
     @include easeOut;
@@ -87,5 +79,12 @@
     &:hover {
       color: $secondary-color;
     }
+  }
+}
+
+// Delay each nav item slide by 0.1s
+@for $x from 1 through 4 {
+  .menu__navigation__item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
   }
 }
