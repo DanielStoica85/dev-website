@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Roboto Slab', sans-serif;
   font-size: $medium-size;
   background: $primary-color;
   height: 100%;
-  color: #fffffa;
+  color: #fdfffc;
 }
 
 a {
-  color: #fffffa;
+  color: #fdfffc;
   text-decoration: none;
 
   &:hover {
