@@ -1,6 +1,10 @@
 @import './base/settings';
 @import './base/base';
 
-@import './components/homePage';
-@import './components/menuButton';
-@import './components/navigationMenu';
+@import './components/layout/menuButton';
+@import './components/layout/navigationMenu';
+@import './components/layout/logo';
+
+@import './components/elements/iconsList';
+
+@import './components/pages/homePage';

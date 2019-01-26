@@ -1,6 +1,7 @@
 import React from 'react';
 import MenuButton from './MenuButton';
 import NavigationMenu from './NavigationMenu';
+import Logo from './Logo';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -25,6 +26,7 @@ export default class Header extends React.Component {
     const showNav = this.state.showNav;
     return (
       <header>
+        <Logo />
         <MenuButton
           onMenuButtonClick={this.onMenuButtonClick}
           showNav={showNav}

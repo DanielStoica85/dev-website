@@ -1,14 +1,23 @@
 import React from 'react';
+import IconsList from '../elements/IconsList';
 
 const Homepage = () => {
   return (
     <main>
-      <h1>Hi,</h1>
       <h1>
-        I'm<span className="text-secondary"> Daniel,</span>
+        Hi<span className="text-secondary">.</span>
       </h1>
-      <h1>web developer.</h1>
-      <h2> Frontend Developer / QA Engineer / JavaScript Enthusiast</h2>
+      <h1>
+        I<span className="text-secondary">'</span>m
+        <span className="text-secondary"> Daniel</span>.
+      </h1>
+      <h2>
+        {' '}
+        Web <span className="text-secondary">Developer</span> / QA{' '}
+        <span className="text-secondary">Engineer</span> / JavaScript{' '}
+        <span className="text-secondary">Enthusiast</span>
+      </h2>
+      <IconsList />
     </main>
   );
 };
