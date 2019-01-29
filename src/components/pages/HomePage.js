@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import IconsList from '../elements/IconsList';
 
 const Homepage = () => {
@@ -12,12 +13,13 @@ const Homepage = () => {
         <span className="text-secondary"> Daniel</span>.
       </h1>
       <h2>
-        {' '}
-        Web <span className="text-secondary">Developer</span> / QA{' '}
-        <span className="text-secondary">Engineer</span> / JavaScript{' '}
-        <span className="text-secondary">Enthusiast</span>
+        I'm a Web & QA <span className="text-secondary">Developer</span> based
+        in Eindhoven, Netherlands.
       </h2>
-      <IconsList />
+      <Link to="/contact" className="contact-button">
+        <i className="fas fa-envelope fa-1x" /> Say Hi!
+      </Link>
+      <IconsList className="icons" />
     </main>
   );
 };

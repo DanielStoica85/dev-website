@@ -6,16 +6,13 @@ export class IconsList extends Component {
     return (
       <div className="icons">
         <Link to="/" target="_blank" rel="noopener">
-          <i className="fab fa-twitter fa-2x" />
-        </Link>
-        <Link to="/" target="_blank" rel="noopener">
-          <i className="fab fa-facebook fa-2x" />
-        </Link>
-        <Link to="/" target="_blank" rel="noopener">
           <i className="fab fa-linkedin fa-2x" />
         </Link>
         <Link to="/" target="_blank" rel="noopener">
           <i className="fab fa-github fa-2x" />
+        </Link>
+        <Link to="/" target="_blank" rel="noopener">
+          <i className="fab fa-facebook fa-2x" />
         </Link>
       </div>
     );
