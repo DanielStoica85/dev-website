@@ -31,7 +31,10 @@ export default class Header extends React.Component {
           onMenuButtonClick={this.onMenuButtonClick}
           showNav={showNav}
         />
-        <NavigationMenu showNav={showNav} />
+        <NavigationMenu
+          onMenuButtonClick={this.onMenuButtonClick}
+          showNav={showNav}
+        />
       </header>
     );
   }

@@ -23,6 +23,7 @@ export default class NavigationMenu extends Component {
               activeClassName="is-active"
               className="menu__navigation__item__link"
               exact={true}
+              onClick={this.props.onMenuButtonClick}
             >
               Home
             </NavLink>
@@ -33,9 +34,10 @@ export default class NavigationMenu extends Component {
             }`}
           >
             <NavLink
-              to="/about"
+              to="/contact"
               activeClassName="is-active"
               className="menu__navigation__item__link"
+              onClick={this.props.onMenuButtonClick}
             >
               About
             </NavLink>
@@ -46,10 +48,10 @@ export default class NavigationMenu extends Component {
             }`}
           >
             <NavLink
-              to="/portfolio"
+              to="/contact"
               activeClassName="is-active"
               className="menu__navigation__item__link"
-              exact={true}
+              onClick={this.props.onMenuButtonClick}
             >
               Portfolio
             </NavLink>
@@ -63,6 +65,7 @@ export default class NavigationMenu extends Component {
               to="/contact"
               activeClassName="is-active"
               className="menu__navigation__item__link"
+              onClick={this.props.onMenuButtonClick}
             >
               Contact
             </NavLink>
@@ -75,5 +78,6 @@ export default class NavigationMenu extends Component {
 
 // PropTypes
 NavigationMenu.propTypes = {
+  onMenuButtonClick: PropTypes.func.isRequired,
   showNav: PropTypes.bool.isRequired
 };

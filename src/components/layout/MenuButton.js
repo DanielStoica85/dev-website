@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 
 export default class MenuButton extends Component {
   render() {
-    console.log(this.props.showNav);
     return (
       <div
         className={`menu-button ${this.props.showNav ? 'close' : ''}`}
