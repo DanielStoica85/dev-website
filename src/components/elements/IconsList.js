@@ -4,17 +4,35 @@ import { Link } from 'react-router-dom';
 export class IconsList extends Component {
   render() {
     return (
-      <div className="icons slide-up">
-        <Link to="/portfolio">
-          <i className="fas fa-briefcase fa-2x" />
-        </Link>
-        <Link to="/" target="_blank" rel="noopener">
-          <i className="fab fa-linkedin fa-2x" />
-        </Link>
-        <Link to="/" target="_blank" rel="noopener">
-          <i className="fab fa-github fa-2x" />
-        </Link>
-      </div>
+      <ul className="icons slide-up">
+        <li>
+          <Link to="/portfolio">
+            <span />
+            <span />
+            <span />
+            <span />
+            <i className="fas fa-briefcase" />
+          </Link>
+        </li>
+        <li>
+          <Link to="/" target="_blank" rel="noopener">
+            <span />
+            <span />
+            <span />
+            <span />
+            <i className="fab fa-linkedin" />
+          </Link>
+        </li>
+        <li>
+          <Link to="/" target="_blank" rel="noopener">
+            <span />
+            <span />
+            <span />
+            <span />
+            <i className="fab fa-github" />
+          </Link>
+        </li>
+      </ul>
     );
   }
 }
