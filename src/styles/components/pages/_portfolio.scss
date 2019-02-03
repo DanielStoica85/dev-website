@@ -1,0 +1,45 @@
+.portfolio-main {
+  text-align: left;
+  justify-content: center;
+
+  .portfolio-intro {
+    display: flex;
+    flex-wrap: wrap;
+
+    .portfolio-description {
+      flex-basis: 60%;
+
+      .page-title {
+        margin-top: 0;
+      }
+
+      .page-subtitle {
+        width: 90%;
+      }
+    }
+
+    .portfolio-skills {
+      flex-basis: 40%;
+      padding-top: 0.5rem;
+
+      .skill-container {
+        width: 90%;
+        display: block;
+        margin-top: 1.5rem;
+        height: 2rem;
+        border: 1px solid $third-color;
+        border-radius: 5px;
+
+        .skill-color {
+          background: $third-color;
+          height: inherit;
+          display: flex;
+          justify-content: space-between;
+          padding: 0 1rem;
+          font-size: 1.5rem;
+          animation: color-fill 2s ease-in-out;
+        }
+      }
+    }
+  }
+}

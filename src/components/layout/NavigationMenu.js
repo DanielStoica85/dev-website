@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 
 export default class NavigationMenu extends Component {
   render() {
-    console.log(portrait);
     return (
       <nav className={`menu ${this.props.showNav ? 'show' : ''}`}>
         <div className={`menu__brand ${this.props.showNav ? 'show' : ''}`}>
@@ -34,7 +33,7 @@ export default class NavigationMenu extends Component {
             }`}
           >
             <NavLink
-              to="/contact"
+              to="/about"
               activeClassName="is-active"
               className="menu__navigation__item__link"
               onClick={this.props.onMenuButtonClick}
@@ -48,7 +47,7 @@ export default class NavigationMenu extends Component {
             }`}
           >
             <NavLink
-              to="/contact"
+              to="/portfolio"
               activeClassName="is-active"
               className="menu__navigation__item__link"
               onClick={this.props.onMenuButtonClick}
