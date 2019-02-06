@@ -1,8 +1,9 @@
-img {
+.logo-image {
   width: 8rem;
   height: 8rem;
   position: absolute;
   left: 3rem;
   top: 3rem;
   cursor: pointer;
+  z-index: 2;
 }

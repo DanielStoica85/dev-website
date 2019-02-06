@@ -7,7 +7,7 @@ export class Logo extends Component {
     return (
       <div>
         <Link to="/">
-          <img src={logo} alt="Logo" />
+          <img className="logo-image" src={logo} alt="Logo" />
         </Link>
       </div>
     );

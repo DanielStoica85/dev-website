@@ -4,7 +4,7 @@ import IconsList from '../elements/IconsList';
 
 const Homepage = () => {
   return (
-    <main>
+    <main className="home-main">
       <h1 className="slide-down">
         Hi<span className="text-secondary">.</span>
       </h1>

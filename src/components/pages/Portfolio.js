@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Skill from '../elements/Skill';
+import PortfolioItem from '../elements/PortfolioItem';
 
 export class Portfolio extends Component {
   state = {
@@ -37,30 +38,34 @@ export class Portfolio extends Component {
       {
         title: 'The Project',
         description: 'This is a short description of the project',
-        image: '',
+        image: './images/item.jpeg',
         url: 'http://www.danielstoica.io',
-        github: 'https://www.github.com/DanielStoica85'
+        github: 'https://www.github.com/DanielStoica85',
+        tools: ['html5', 'css3', 'React']
       },
       {
         title: 'The Project',
         description: 'This is a short description of the project',
-        image: '',
+        image: './images/item.jpeg',
         url: 'http://www.danielstoica.io',
-        github: 'https://www.github.com/DanielStoica85'
+        github: 'https://www.github.com/DanielStoica85',
+        tools: ['html5', 'css3', 'React']
       },
       {
         title: 'The Project',
         description: 'This is a short description of the project',
-        image: '',
+        image: './images/item.jpeg',
         url: 'http://www.danielstoica.io',
-        github: 'https://www.github.com/DanielStoica85'
+        github: 'https://www.github.com/DanielStoica85',
+        tools: ['html5', 'css3', 'React']
       },
       {
         title: 'The Project',
         description: 'This is a short description of the project',
-        image: '',
+        image: './images/item.jpeg',
         url: 'http://www.danielstoica.io',
-        github: 'https://www.github.com/DanielStoica85'
+        github: 'https://www.github.com/DanielStoica85',
+        tools: ['html5', 'css3', 'React']
       }
     ]
   };
@@ -92,7 +97,20 @@ export class Portfolio extends Component {
             })}
           </div>
         </div>
-        <div className="projects" />
+        <div className="projects">
+          {this.state.projects.map((project, index) => {
+            return (
+              <PortfolioItem
+                key={index}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                url={project.url}
+                github={project.github}
+              />
+            );
+          })}
+        </div>
       </main>
     );
   }
