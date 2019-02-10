@@ -15,22 +15,30 @@ export class IconsList extends Component {
           </Link>
         </li>
         <li>
-          <Link to="/" target="_blank" rel="noopener">
+          <a
+            href="https://www.linkedin.com/in/daniel-stoica-18262650/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span />
             <span />
             <span />
             <span />
             <i className="fab fa-linkedin" />
-          </Link>
+          </a>
         </li>
         <li>
-          <Link to="/" target="_blank" rel="noopener">
+          <a
+            href="https://github.com/DanielStoica85"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span />
             <span />
             <span />
             <span />
             <i className="fab fa-github" />
-          </Link>
+          </a>
         </li>
       </ul>
     );

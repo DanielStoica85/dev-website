@@ -18,7 +18,7 @@ export class Portfolio extends Component {
         percentage: '75%'
       },
       {
-        name: 'Vamilla JavaScript',
+        name: 'Vanilla JavaScript',
         percentage: '80%'
       },
       {
@@ -44,19 +44,22 @@ export class Portfolio extends Component {
         tools: ['html5', 'css3', 'React']
       },
       {
-        title: 'The Project',
-        description: 'This is a short description of the project',
+        title: 'Ooly',
+        description:
+          'A presentation website for Ooly, an app-connected sleep companion that helps your child understand when it’s time to get up.',
         image: './images/item.jpeg',
-        url: 'http://www.danielstoica.io',
+        url: 'http://novo123.com/',
         github: 'https://www.github.com/DanielStoica85',
         tools: ['html5', 'css3', 'React']
       },
       {
-        title: 'The Project',
-        description: 'This is a short description of the project',
-        image: './images/item.jpeg',
-        url: 'http://www.danielstoica.io',
-        github: 'https://www.github.com/DanielStoica85',
+        title: 'Link Save Chrome Extension',
+        description:
+          'This extension offers the simplest way to store and access your favorite links from your favorite browser.',
+        image: './images/projects/linksave.jpg',
+        url:
+          'https://chrome.google.com/webstore/detail/link-save/hnpbcoobdmlojdacjmjgglfmnaakenod',
+        github: 'https://github.com/DanielStoica85/link-save-chrome-extension',
         tools: ['html5', 'css3', 'React']
       },
       {
